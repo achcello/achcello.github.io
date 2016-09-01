@@ -1,12 +1,6 @@
 <html>
 <head>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-<meta name="google-site-verification" content="cit9qJz-y7IJEXHlfAErb3GzuHgIlFA02Py4mS3sIHI" />
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-
 <style type="text/css">
   #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:300px;}
 
@@ -44,78 +38,6 @@ can you solve our <a href="http://geohot.com/projective_challenge.tar.gz">progra
 <br/><br/>
 <span style="font-family: monospace">&lt;my first name&gt; at comma.ai</span>
 <br/><br/>
-
-<!-- Begin MailChimp Signup Form -->
-<div id="mc_embed_signup">
-<form action="https://comma.us12.list-manage.com/subscribe/post?u=e127cf7151180db2b566d880b&amp;id=bdf2010348" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-  
-  <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e127cf7151180db2b566d880b_bdf2010348" tabindex="-1" value=""></div>
-    <span class="clear"><input type="submit" value="subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="font-family: monospace"></span>
-    </div>
-</form>
-</div>
-<!--End mc_embed_signup-->
-
-<br/>
-<span style="font-family: monospace; font-size: 20px"><a href="http://getchffr.com/">chffr for Android (open beta)</a></span><br/>
-<span style="font-family: monospace; font-size: 20px"><a href="https://docs.google.com/forms/d/1BwTMXgPjQjWS3KktC88-yvcBrviWkgsK27RGEiHE9AE/viewform">iOS chffr beta signup</a></span><br/>
-<br/>
-<span style="font-family: monospace; font-size: 16px"><a href="https://www.youtube.com/watch?v=sD-8CteXJl4&list=PLlDK3GJKKjqr5kHsup39uklcFxPg67uTY">chffr orientation video</a></span><br/>
-<br/>
-<span style="font-family: monospace; color: #606060">
-we didn't do anything wrong, but somehow, we lost<br/>
-<em>-- <a href="https://www.reddit.com/r/business/comments/48841a/nokia_ceo_ended_his_speech_saying_this_we_didnt/">nokia</a>, or car companies in 5 years</em>
-<br/><br/>
-</span>
-
-<div style="width: 400px; height: 300px">
-<span id="sleeping" style="font-family: monospace">the test platform is sleeping...zzz</span><br/>
-<div style="visibility: hidden" id="map"></div>
-</div>
-
-<script>
-
-
-function update_map(x, y) {
-  if (x != 0 && y != 0) {
-    map.setCenter({lat: x, lng: y});
-    marker.setPosition({lat: x, lng: y});
-
-    $("#map")[0].style.visibility = "visible";
-    $("#sleeping")[0].style.visibility = "hidden";
-  } else {
-    $("#map")[0].style.visibility = "hidden";
-    $("#sleeping")[0].style.visibility = "visible";
-  }
-}
-
-function do_update_map() {
-  $.getJSON("data/location.json", function(data) {
-    //console.log(data);
-    update_map(data.gps[0], data.gps[1]);
-    window.setTimeout(do_update_map, 2000);
-  });
-}
-
-function initMap() {
-  test_location = {lat: 37.7833, lng: -122.4167};
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: test_location,
-    disableDefaultUI: true,
-    zoom: 11
-  });
-  marker = new google.maps.Marker({
-    position: test_location,
-    map: map
-  });
-  do_update_map();
-}
-
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDu2lXe6b5E55W6iKajZbZ0jB5Im0Byk3M&callback=initMap" async defer></script>
 
 </center>
 
