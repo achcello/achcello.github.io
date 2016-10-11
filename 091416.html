@@ -1,0 +1,70 @@
+<html>
+<body bgcolor="#fff7e6">
+	<head>
+		<style>
+			body {
+				font-family: monospace;
+				font-size: 16px;
+				width: 800px;
+			}
+			ul li { margin-bottom: 16px }
+		</style>
+		<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_SVG"></script>
+	</head>
+	<body>
+		<center>
+			<br>
+			<br>
+			<img src="uavbw.png">
+			<br>
+			<br>
+			<span>stumbling into aerodynamics</span>
+			<br>
+			<br>
+			<a href=index.html>
+				Home<a/>
+				<a href=posts.html>
+					Posts<a/>
+					<a href=about.html>
+						About Me<a/>
+						<br>
+						<h2>Posts</h2>
+		</center>
+		<h2>9/14/16 - Some Interesting Airfoils</h2>
+<p align="justify">
+		I've been exploring various types of airfoils in the past couple of weeks in order to get to know what kinds of air foils I can use for different applications. My goal is to be able to, for example, know exactly which airfoil I should use if I want to build a glider with a low Reynolds number.
+		<br><br>
+		My recourses for this type of research are scattered. In order to get a variety of views on airfoils, I've consulted online forums, peer-reviewed journals, and build logs.
+		<br><br>
+		Here is an example of how I document an airfoil I stumble on:
+		<ul>
+			<li>I found a <a href="https://drive.google.com/file/d/0B9mGstCK29i-SDZmTmZMRFNPcGs/view?usp=sharing" target="_blank">paper<a/> from the University of Illinois about airfoils in the context of model airplanes. How useful . . .</li>
+			<li>Chapter 3.2 is about Thermal Duration Sailplanes, a topic in which I am interested considering my goal of efficiency for my future designs.</li>
+			<li>The most popular airfoil in this section is the SD7037.</li>
+		</ul>
+		<p align="justify">
+		Now that I've found an interesting and useful airfoil, I research it in more detail. For this, I use a combination of my informational source on the airfoil, in this case the UIUC paper, and <a href="http://www.airfoiltools.com" target="_blank">airfoiltools.com<a/>, a database of airfoil coordinates and basic performance plots.<br><br>
+		The next steps in documentation are as follows:
+		<ul>
+			<li>Create a folder with the name of the airfoil. Example: SD7037</li>
+			<li>Create a .DAT file (actually just a text file). Naming example: SD7037.DAT</li>
+			<li>Attain coordinates for the airfoil from airfoiltools.com and place these in the text file. <a href="SD7037.DAT" taret="_blank">Example coordinate file.<a/> These coordinates are given with a chord length of 1, but they can be scaled to any chord length needed. Because of scaling limitations in Inventor, the easiest way to do this to multiply all coordinates by the desired chord length in the Excel file (in Inches, the default unit in Inventor).</li>
+			<li>Import the data into a Microsoft Excel spreadsheet to organize the coordinates.</li>
+			<li>Import the Excel spreadsheet into a sketch in Inventor and interpret the coordinates as a set of points.<br>
+			<center>
+				<img src="sd7037points.png" width="500px">
+			</center>
+			</li>
+			<li>Use a spline to interpolate the point and draw a curved, smooth airfoil.</li>
+			<li>Extrude the airfoil to make it a three dimensional object and export it as a stereolithographic (<a href="https://www.wikiwand.com/en/STL_(file_format)" target="_blank">STL</a>) file for greatest accuracy and universal compatibility.
+			<center>
+				<img src="sd7037render.gif" width="500px">
+			</center></li>
+			<li>Use Autodesk Flow Design to import the STL file and generate an aerodynamic analysis. Save this for later use in comparison to other airfoils.
+			<center>
+				<img src="SD7037.png" width="500px">
+			</center></li>
+		</ul>
+		<p align="justify">
+		For now, I am collecting and tentatively comparing airfoils, but in the future I will perform more rigorous tests and build physical models to see which airfoil is best for my future design of an aircraft.<br><br><br>
+		-Aryn Harmon

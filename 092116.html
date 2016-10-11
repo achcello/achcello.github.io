@@ -1,0 +1,61 @@
+<html>
+<body bgcolor="#fff7e6">
+<head>
+	<style>
+		body {
+			font-family: monospace;
+			font-size: 16px;
+			width: 800px;
+		}
+		ul li { margin-bottom: 16px }
+	</style>
+	<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_SVG"></script>
+</head>
+<body>
+	<center>
+		<br>
+		<br>
+		<img src="uavbw.png">
+		<br>
+		<br>
+		<span>stumbling into aerodynamics</span>
+		<br>
+		<br>
+		<a href=index.html>
+			Home<a/>
+			<a href=posts.html>
+				Posts<a/>
+				<a href=about.html>
+					About Me<a/>
+					<br>
+					<h2>Posts</h2>
+	</center>
+
+<h2>9/28/16 - Cruising Range</h2>
+
+<p align="justify">
+It's important to consider the cruising range of an aircraft so the fuel tanks are not overfilled (wasting energy by carrying too much weight) or underfilled (this presents some obvious problems). In our hypothetical situation, we'll look at an aircraft traveling at a constant speed relative to the wind and a constant altitude.
+<br><br>
+Predicting how far an aircraft will travel on a given amount of fuel can be difficult because we must first consider how efficient the aircraft is (\(\eta_o\)) as well as how fast its weight is changing due to the usage of fuel (\( \frac{{\rm d}W} {{\rm d} t} \)). Following a somewhat involved <a href="http://web.mit.edu/16.unified/www/FALL/thermodynamics/notes/node98.html" target="_blank">derivation<a/>, we can eventually produce the Breguet range equation,
+
+$${\rm R}= \eta _ o\frac{L}{D}\frac{Q_ R}{g} \ln \left(\frac{W_{\rm initial}}{W_{\rm final}}\right)$$
+
+In this equation,
+<ul>
+	<li>\(\eta_o\) is a constant which represents the efficiency of the aircraft. The calculation is simply \(\frac{Q_{\rm consumed}}{Q_{\rm supplied}}\) (\(Q\) is energy). Propeller based systems are generally more efficient than jet based propulsion systems. \({\rm R} \propto \eta_o \), so a greater efficiency results in a greater range.</li>
+	<li>\( \frac{L}{D} \) is the lift to drag ratio. The magnitudes of the forces of lift and drag will change because of the changing weight of the aircraft, but the ratio between the two will always stay the same.</li>
+	<li>\(Q_R\) is the amount of energy stored per volumetric unit in the fuel. </li>
+	<li>\(g\) is the acceleration of gravity, about 9.81 \(\frac{m}{s^2}\).</li>
+	<li>\(W_{\rm initial}\) and \(W_{\rm final}\) represent the initial and final weights, respectively. If nothing abnormal occurs on the flight (nobody gets thrown off?), the final weight will simply be the initial weight less the weight of the fuel expected to be used.</li>
+</ul>
+<p align="justify">
+The cruising range is an interesting topic to explore because of the importance of range in determining an appropriate load for an aircraft to lift. The cruising range also raises questions about the propulsion system used to power the plane. New developments are being made in subsonic, supersonic, and hypersonic systems.<br><br>
+The <a href="https://www.wikiwand.com/en/Boeing_X-51" target="_blank">Boeing X-51</a> was able to sustain flight at Mach 5 (3300 mph) for 140 seconds using a scramjet, a type of jet that uses a supersonic flow throughout the entire engine, first compressing the flow, injecting fuel and igniting it, then using the exhaust as propulsion.<br>
+<center>
+	<img src="scramjet.svg" width="500px">
+</center><br>
+<p align="justify">
+This technology is both ominous, considering the intended use for the X-51 (a missile), and a bid for the future in aviation. The main obstacles for faster atmospheric travel is the troubling properties of supersonic flows, the efficiency of these vehicles, and the fact that a turbofan jet, ramjet, and scramjet only function at their respective velocities. A normal turbofan will only function well at subsonic speeds, while a scramjet can only work if it is moving through a super/hypersonic flow. The X-51 has to be carried to 50,000 feet, dropped, then propelled by a rocket to Mach 4.5, and only then will the scramjet function. This isn't practical for commercial travel.
+
+<br><br><br>
+-Aryn Harmon

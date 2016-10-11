@@ -1,0 +1,74 @@
+<html>
+<body bgcolor="#fff7e6">
+    <head>
+        <style>
+            body {
+                font-family: monospace;
+                font-size: 16px;
+                width: 800px;
+            }
+            ul li { margin-bottom: 16px }
+        </style>
+        <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_SVG"></script>
+    </head>
+    <body>
+        <center>
+            <br>
+            <br>
+            <img src="uavbw.png">
+            <br>
+            <br>
+            <span>stumbling into aerodynamics</span>
+            <br>
+            <br>
+            <a href=index.html>
+                Home<a/>
+                <a href=posts.html>
+                    Posts<a/>
+                    <a href=about.html>
+                        About Me<a/>
+                        <br>
+                        <h2>Posts</h2>
+        </center>
+        <h2>9/9/16 - Numbers</h2>
+        <h3>1. Mach Number</h3>
+        <p align="justify">
+        The Mach Number is a ratio which gives an indication of the characteristics of the flow around a body relative to the speed of sound. Because flow characteristics change drastically as the flow velocity approaches the speed of sound, 
+        $$\displaystyle M=\frac{u}{c}$$
+        \(M\) is the Mach number, \(u\) is the local flow velocity, and \(c\) is the speed of sound in the medium. Because the speed of sound is not constant through all media, Mach Numbers' velocities can change.<br><br>
+        
+        The flow velocity, \(u\), is defined as local. This aspect gives rise to the possibility of there being different Mach numbers along the airplane's \(\hat{i}\) (streamwise) direction. Imagine: the flow starts in front of the wing at velocity \(V_\infty\). As it travels over the wing, it speeds up with the increased distance around the airfoil. \(V_\infty\) may have started out as subsonic, but as it speeds up, it might cross into supersonic territory. When the flow is mixed like this, it is labeled transonic. The diagram below shows the mixed flows of transonic speeds.
+        <br><br>
+        <center>
+            <img src="transonics.png" width=350px>
+        </center>
+        <br><br>
+        <p align="justify">
+        If the flow is entirely subsonic, usually around \(M=0.72\), the label is subsonic. If it is entirely supersonic, the label is supersonic. The Mach number of an aircraft is given relative to its freestream velocity, but the Mach numbers calculated locally will never be homogeneous.
+        
+
+        <h3>2. Reynolds Number</h3>
+<p align="justify">
+        The Reynolds number is used a non-dimensional number used to predict how important viscous effects will be on the aircraft. The Reynolds number is given by:
+
+        $${R\hspace{-1.25pt}e}_{\! \scriptscriptstyle \infty } \equiv \frac{{\rho }_{\! \scriptscriptstyle \infty }V_{\! \scriptscriptstyle \infty }l_{\rm ref}}{{\mu }_{\! \scriptscriptstyle \infty }}$$
+
+        In the equation,
+        <ul>
+            <li>\({\rho }_{\! \scriptscriptstyle \infty }\) is the density of the air in the vicinity of the aircraft</li>
+            <li>\(V_{\! \scriptscriptstyle \infty }\) is the freestream velocity</li>
+            <li>\(l_{\rm ref}\) is the reference length, usually the chord</li>
+            <li>\({\mu }_{\! \scriptscriptstyle \infty }\) is the viscosity of the air</li>
+        </ul>
+<p align="justify">
+        If there is a higher density, velocity, or chord, the Reynolds number will be larger which means the flow will likely be dominated by inertial forces and be subject to turbulence. If there is a higher viscosity, the Reynolds number will be lower, and the flow will be more subject to viscous forces, meaning the flow will be smooth and fluid.
+        <br><br>
+        <center>
+            <img src="vortex.gif">
+        </center>
+<p align="justify">
+        <br><br>
+        Aircraft with lower Reynolds numbers have larger boundary layers, the area close to the surface of the aircraft where the velocity of the flow is slowed by frictional stresses.
+        <br><br>
+        The Reynolds number can be very important in testing bodies in wind tunnels. (More about that <a href=090216.html>here</a>. <br><br><br>
+        -Aryn Harmon
