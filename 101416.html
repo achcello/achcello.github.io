@@ -1,1 +1,90 @@
-In progress . . .
+<html>
+	<body bgcolor="#fff7e6">
+		<head>
+			<style>
+				body {
+					font-family: monospace;
+					font-size: 16px;
+					width: 800px;
+				}
+
+				ul li {
+					margin-bottom: 16px
+				}
+			</style>
+			<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_SVG"></script>
+		</head>
+		<body>
+			<center>
+				<br>
+				<br>
+				<img src="uavbw.png">
+				<br>
+				<br>
+				<span>stumbling into aerodynamics</span>
+				<br>
+				<br>
+				<a href=index.html>
+					Home<a/>
+					<a href=posts.html>
+						Posts<a/>
+						<a href=about.html>
+							About Me<a/>
+							<br>
+							<h2>Posts</h2>
+			</center>
+			<h2>10/14/16 - Continuum versus Molecular Models</h2>
+			<p align="justify">
+We can think about air in several ways. We know it is a collection of gases and particles which are all molecules. When something moves through the air, it makes contact with each of these individual molecules. The extent to which the individual collisions matter varies based on the size of the particle, density of the air, speed of the particle motion, and the size of the aircraft.
+<br><br>
+To describe this conundrum, we can use the concept of a mean free path. The mean free path is best described as the average distance molecules in a control volume travel before encountering another. This can be approximated using the factors discussed earlier, but the actual equation is not important in this context. (It's also not entirely accurate because of the difficulty of ascertaining the diameter of a molecule; are the electrons really in only one place? How do we measure that position?)
+
+<center>
+<figure>
+	<img src="mfp.jpg">
+	<figcaption>
+		<p align="center">
+		Molecule Paths
+	</figcaption>
+</figure>
+</center>
+
+<p align="justify">
+The graphic above depicts molecule paths in low and high pressures. As you can see in this representation, each molecule travels in a straight line (let's ignore gravity) until it hits another molecule. This would occur at every turn in the path. In a low pressure environment, there are not very many gas molecules, so there are fewer collisions. As the pressure, \(p\), and the density, \(\rho\), increase, collisions become more and more frequent, and the mean free path decreases.
+
+<center>
+<figure>
+	<img src="mfpg.png">
+	<figcaption>
+		<p align="center">
+		Altitude vs. Mean Free Path
+	</figcaption>
+</figure>
+</center>
+
+<p align="justify">
+This graph makes mean free path look incredibly significant. If you're flying at an altitude of 1000 km, air molecules collide on average after traveling 1,000,000 meters?! This actually isn't so concerning for the vast majority of flight because most crafts are limited to an altitude of about 14 km. At this altitude, the mean free path only just starts to rise from a tenth of a micrometer.
+<br><br>
+So all aerodynamic forces are due to collisions with particles, right? How do we calculate these if a particle collides every time it travels a tenth of a micrometer?
+<br><br>
+Not all of this data is significant. Much of it can be approximated. Rather than considering each individual molecule in every calculation, analysis can be done on all of the molecules as a continuum. This is treating the fluid as a continuous data set instead of a discreet one. 
+
+<center>
+<figure>
+	<img src="pixel-vs-vector1.png" width="350px">
+	<figcaption>
+		<p align="center">
+		Raster vs. Vector<br>
+		Molecular vs. Continuum<br>
+		Discreet vs. Continuous
+	</figcaption>
+</figure>
+</center>
+
+<p align="justify">
+A good example for this kind of data is the representation of graphics as either raster or vector files. One uses a collection of many data points while the other simply uses a set of functions to describe the same set.
+<br><br>
+Most of aerodynamics with aircraft with use the continuum model of fluids, but as nanotechnology advances and non-passenger aircraft shrink, there might be appropriate applications to which the molecular model can be applied.
+
+<br><br><br>
+--Aryn Harmon
