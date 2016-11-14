@@ -1,0 +1,71 @@
+<html>
+	<body bgcolor="#fff7e6">
+		<head>
+			<style>
+				body {
+					font-family: monospace;
+					font-size: 16px;
+					width: 800px;
+				}
+
+				ul li {
+					margin-bottom: 16px
+				}
+			</style>
+			<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_SVG"></script>
+		</head>
+		<body>
+			<center>
+				<br>
+				<br>
+				<img src="uavbw.png">
+				<br>
+				<br>
+				<span>stumbling into aerodynamics</span>
+				<br>
+				<br>
+				<a href=index.html>
+					Home<a/>
+					<a href=posts.html>
+						Posts<a/>
+						<a href=about.html>
+							About Me<a/>
+							<br>
+							<h2>Posts</h2>
+			</center>
+			<h2>11/11/16 - Energy</h2>
+			<p align="justify">
+The previous discussions about mass and momentum can inform discussion about work and energy. For energy, let's just start with this massive conservation of energy equation.
+
+$$\displaystyle \int \hspace{-1.7ex} \int \hspace{-1.7ex} \int _{\cal V}\frac{\partial }{\partial t}\left(\rho e_0\right)\,  {\rm d}{\cal V}+ \int \hspace{-1.7ex} \int _{S} \rho e_0 \, {\bf V}\cdot \hat{{\bf n}}\,  {\rm d}S = \displaystyle  \int \hspace{-1.7ex} \int \hspace{-1.7ex} \int _{{\cal V}} \rho \, {\bf g}\cdot {\bf V}\,  {\rm d}{\cal V}- \int \hspace{-1.7ex} \int _{S} p\, \hat{{\bf n}} \cdot {\bf V}\,  {\rm d}S + \int \hspace{-1.7ex} \int _{S} \boldsymbol {\tau }\cdot {\bf V}\,  {\rm d}S + \displaystyle  \sum \left({\bf F}_{\rm ext} \cdot {\bf V}_{\rm ext}\right) - \int \hspace{-1.7ex} \int _ S \dot{{\bf q}}\cdot \hat{{\bf n}}\, {\rm d}S$$
+
+This is admittedly an ungainly way of representing something that does not have to be so complicated.
+
+<ul>
+	<li><p align="justify">
+		\(\displaystyle \int \hspace{-1.7ex} \int \hspace{-1.7ex} \int _{\cal V}\frac{\partial }{\partial t}\left(\rho e_0\right)\,  {\rm d}{\cal V}.\) This term uses \(\cal{V}\), the volume; \(\rho\), the volumetric mass density; and \(e_0\), the specific internal energy (a mass energy density) with the addition of kinetic energy. The specific internal energy (\(\frac{J}{kg}\)) is multiplied with a mass density (\(\frac{kg}{m^3}\)), so the units left in the integrand are \(\frac{J}{m^3}\). Integrating will multiply each bit of the integrand by \(\cal{V}\), so the units left will simply be \(J\). Now the term is simply \(\frac{\partial }{\partial t}\) of some energy. In it's entirety, this term describes the change in energy in some volume \(\cal{V}\).
+	</li>
+	<li><p align="justify">
+		\(\displaystyle \int \hspace{-1.7ex} \int _{S} \rho e_0 \, {\bf V}\cdot \hat{{\bf n}}\,  {\rm d}S.\) This term uses \(\rho\) and \(e_0\) again. \({\bf V}\cdot \hat{{\bf n}}\) is the velocity parallel to the normal vector of the surface \(S.\) \({\rm d}S\) is  small amount of area on the surface. This integral describes the energy flow through the entire surface of the control volume.
+	</li>
+	<li><p align="justify">
+		\(\displaystyle  \int \hspace{-1.7ex} \int \hspace{-1.7ex} \int _{{\cal V}} \rho \, {\bf g}\cdot {\bf V}\,  {\rm d}{\cal V}.\) This term describe all of the work done by gravity on the air. The mass is found by integrating the density, \(\rho\). Like any momentum, the formula is then simply a mass times a velocity.
+	</li>
+	<li><p align="justify">
+		\(\displaystyle - \int \hspace{-1.7ex} \int _{S} p\, \hat{{\bf n}} \cdot {\bf V}\,  {\rm d}S.\) This term is the work done by the pressure on the boundary of the control volume. This is negative because pressure acts opposite to the normal of the face it is acting on.
+	</li>
+	<li><p align="justify">
+		\(\displaystyle \int \hspace{-1.7ex} \int _{S} \boldsymbol {\tau }\cdot {\bf V}\,  {\rm d}S.\) This term is another relatively simple one. It is again the dot product of a force and a velocity, \(\boldsymbol{\tau} \cdot \bf{V}\), so this indicates the work done by the torsional forces.
+	</li>
+	<li><p align="justify">
+		\(\displaystyle  \sum \left({\bf F}_{\rm ext} \cdot {\bf V}_{\rm ext}\right).\) This is a general statement to include any work that has not been accounted for in other terms. These are forces that are acting on the control volume.
+	</li>
+	<li><p align="justify">
+		\(\displaystyle - \int \hspace{-1.7ex} \int _ S \dot{{\bf q}}\cdot \hat{{\bf n}}\, {\rm d}S.\) This term does not involve any forces. It is working with heat. \(\dot{\bf{q}}\) is the first time derivative of heat, \(\bf{q}\), or the heat flow. Because the normal vector, \(\hat{\bf{n}}\), of the control volume points outwards, more heat flowing in this direction means a negative change in total energy, so this term is subtracted.
+	</li>
+</ul>
+<p align="justify">
+This whole equation represents how different sources of energy work together in a control volume. If the air is completely still, we know that the energy is simply equal to the internal energy of the air molecules. If heat were applied to the control volume, there would be a negative heat flow, and the total energy would rise. The rise would originate on the right side of the equation with the heat flow term. The response on the left side would need to be a rise as well. This rise would be the result of an increase in the value of \(e_0\) because it encompasses the chemical and mechanical energy of the molecules which changes with heat.
+
+<br><br><br>
+--Aryn Harmon
