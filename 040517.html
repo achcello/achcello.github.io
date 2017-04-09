@@ -1,0 +1,75 @@
+<html>
+	<body bgcolor="#fff7e6">
+		<head>
+			<style>
+				body {
+					font-family: monospace;
+					font-size: 16px;
+					width: 800px;
+				}
+
+				ul li {
+					margin-bottom: 16px
+				}
+			</style>
+			<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_SVG"></script>
+		</head>
+		<body>
+			<center>
+				<br><br>
+				<img src="uavbw.png">
+				<br><br>
+				<span>stumbling into aerodynamics</span>
+				<br><br>
+				<a href=index.html>Home<a/>
+				<a href=posts.html>Posts<a/>
+				<a href=about.html>About Me<a/>
+				<br>
+				<h2>Posts</h2>
+			</center>
+			<h2>4/5/17 - Investigations into Design</h2>
+<p align="justify">
+
+There are a couple aspects of design which I must investigate in order to be able to begin a plausible design.
+
+<ul>
+	<li>Location of center of gravity</li>
+	<li>Location of center of lift/pressure/drag</li>
+	<li>Relationship between wingspan and total length</li>
+	<li>Root airfoil and tip airfoil</li>
+	<li>Mass to lift ratio</li>
+	<li>Flight control/processing</li>
+</ul>
+
+<h3>Center of Gravity</h3>
+I need a correctly placed center of gravity to influence flight stability, efficiency, and stall characteristics.
+
+<center>
+<img src="cgravity.gif" width="300px">
+</center>
+
+<p align="justify">
+The position of the center of gravity can be calculated once I have other dimensions for the aircraft. I am anticipating a wingspan of one meter, so \(y=0.5\) meters.
+
+<h3>Center of Lift/Pressure/Drag</h3><p align="justify">
+
+This is the center about which all torques rotate. However, it is hard to ever use the center of pressure in designing an aircraft because it changes with the behavior of the flow around it and the state of the aircraft.
+
+<h3>Wingspan and Aircraft Dimensions</h3><p align="justify">
+
+My target wingspan, as mentioned before, is one meter. For a glider, the length of the aircraft should be about the same as the wingspan or a little shorter. 
+
+<h3>Root airfoil and tip airfoil</h3><p align="justify">
+
+I know I want to use the SD3037 airfoil for the root; this airfoil seems very well suited for a powered, low reynolds number glider. The tip might work with a flatter airfoil, but I will first try a wing design with a consistent airfoil. I will try a slightly upturned wing for stability.
+
+<h3>Weight and Lift</h3><p align="justify">
+
+"The thrust-to-weight ratio and wing loading are the two most important parameters in determining the performance of an aircraft," (Daniel P. Raymer, Aircraft Design: A Conceptual Approach, Section 5.1). Apparently this is pretty important. A ratio of 1.0 seems like an appropriate balance. The aircraft should use about 25-50 watts/pound as a minimum power. I could also use a rocket booster to get to the correct gliding altitude.
+
+<h3>Flight Control and Processing</h3><p align="justify">
+
+I can use an Arduino-based flight controller to control the flight of the aircraft. Another option is to do everything completely manually by simply routing receiver channels to the servos and electronic speed controllers (ESCs). This requires the pilot to be skill and constantly responding to every twitch of the wind and shift in the center of gravity. This is the simplest and most reliable method of control, but I might crash if I try to fly like this. A flight controller can provide varying degrees of autonomy ranging from noise filtering to fully autonomous (and even intelligent) flight.
+
+<br><br><br>
+--Aryn Harmon
